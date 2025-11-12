@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PracticalTest01Var06">
         <activity
-            android:name=".MainActivity"
+            android:name=".PracticalTest01Var06MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
