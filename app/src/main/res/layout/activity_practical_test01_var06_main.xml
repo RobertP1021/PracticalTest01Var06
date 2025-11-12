@@ -1,19 +1,92 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PracticalTest01Var06MainActivity">
+    android:padding="16dp">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <!-- Conținutul de sus -->
+    <LinearLayout
+        android:id="@+id/contentLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vote for your favorite option:"
+            android:layout_gravity="center"/>
+
+        <Button
+            android:id = "@+id/aButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Option A" />
+
+        <Button
+            android:id = "@+id/bButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Option B" />
+
+        <Button
+            android:id = "@+id/cButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Option C" />
+
+        <Button
+            android:id = "@+id/dButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Option D" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:paddingTop="16dp">
+
+            <TextView
+                android:id = "@+id/totalVotes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Total Votes: 0"
+                android:gravity="center" />
+
+            <TextView
+                android:id = "@+id/leadingOption"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Leading Option: N/A"
+                android:gravity="center" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Botoanele de jos -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id = "@+id/resetVotes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:text="Reset Votes" />
+
+        <Button
+            android:id = "@+id/viewReport"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:text="View Report" />
+    </LinearLayout>
+
+</RelativeLayout>
